@@ -1,41 +1,42 @@
 # Tja
 
-## A texting journaling assistant
+## A therapeutic journaling assistant
 
-# FIXME: Re-write the read-me
+_note: not a real therapist_
 
-_note: all news-sources, prompt, and text material are in Swedish, documentation in english_
-
-This is a small example program that shows how prompt engineering can be done using the ChatGPT API and external text sources. Every day ChatGPT generates the news headlines for the following day, by continuing the events of the current day.
-
-It works the following way
-
-- It fetches news headlines from the RSS feed of The Swedish television bureau, SVT.
-- These headlines are used to generate a prompt for ChatGTP where future events will be predicted.
-- ChatGPT responds with news headlines for tomorrow, from which a newsletter email is created.
-- Lastly email subscribers are fetched from a google spreadsheet document, and are sent the newly created newspapper.
-
-This is run as a CRON job 07:30 AM everyday.
-
-## Usage
-
-You can sign up for the newsletter at [news.lyresten.se](https://news.lyresten.se).
+This is a service for the [signal](https://signal.org/sv/) messaging service that makes the "note to self" feature start to behave as your own personal therapist, that will nag you to write a journal entry at the end of each day.
 
 ## Background and motivation
 
-Like everybody else I been thinking and tinkering a lot with ChatGPT, and I wanted to produce something tangible. One idea that I been thinking about for interesting integrations is having ChatGPT being the one contacting you. Hope you'll find this inspiring.
+I wanted to get better at keeping a diary, but always think its difficult to get started and keep it up as a habit. So I started creating a Signal-bot that would remind me to write in my journal and that would offer writing prompts and advice. As my reasoning for keeping a journal is for self-therapeutic and mental health reasons I found and included a ChatGPT personality based on therapeutic analysis.
 
-## Development
+## Results
 
-1. Install dependencies
+The results are working for my personal use, might not be the best documented repository I have released.
+
+## Install and configure
+
+1. Rename `env.example` to `.env` and enter the correct values for each field, only the API key for ChatGPT is neccessary for running the test command - for example if you don't want to use this as an signal agent.
+
+2. Dependencies
+
+ You'll need to install `signal-cli` on the same device and link or register an account, that accounts phone number must be added to the .env file.
+
+3. Install dependencies
 
    `npm ci`
 
-2. Rename `env.example` to `.env` and enter the correct values for each field, only the API key for ChatGPT is neccessary for generating news stories - if you don't want to use this as an email service some minor modifications are neccessary.
+### Test the service in the terminal
 
-3. Test the service
+   `node index.mjs test`
 
-   `node index.mjs test <your@email.address>`
+This does not require you to set up signal-cli, but you do need a OpenAI API Key.
+
+### Run it as a signal service
+
+   `node index.mjs start`
+
+---
 
 Enjoy ❤️
 Lyret
