@@ -1,8 +1,8 @@
-# Tomorrow's News, Today!
+# Tja
 
-## A ChatGPT news predictor
+## A texting journaling assistant
 
-![](https://lh5.googleusercontent.com/azCX6GY9dfGXCiAg4TZrosEFE7RYx8bLNlpY0B3gfG8e0H6ghset7r_69694idw2Ouuiw0AxCOFXedM0LoI_jde3asL7jULsG2NjgU9AbQYgCD9OWj8vSVSsoLChTE-_Bw=w1020)
+# FIXME: Re-write the read-me
 
 _note: all news-sources, prompt, and text material are in Swedish, documentation in english_
 
