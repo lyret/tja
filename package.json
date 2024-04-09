@@ -5,11 +5,12 @@
   "author": "Viktor Lyresten <viktor@lyresten.es>",
   "license": "UNLICENSED",
   "dependencies": {
-    "chatgpt": "^5.1.2",
     "commander": "^10.0.0",
     "dotenv": "^16.0.3",
     "execa": "^8.0.1",
     "flat-cache": "^4.0.1",
-    "node-schedule": "^2.1.1"
+    "luxon": "^3.4.4",
+    "node-schedule": "^2.1.1",
+    "openai": "^4.33.0"
   }
 }

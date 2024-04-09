@@ -2,3 +2,4 @@
 .nova
 .env
 node_modules
+history
