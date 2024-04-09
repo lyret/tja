@@ -41,7 +41,7 @@ const ChatGPTConnection = new OpenAI({
 });
 
 /** Cached session information */
-const CACHE = FlatCache.load("maincache2");
+const CACHE = FlatCache.load("tja");
 
 /** Current state of any ongoing session */
 const SESSION = {
@@ -62,7 +62,7 @@ const SESSION = {
 	/** Indicates that the session is active, otherwise it has ended */
 	ACTIVE: false,
 	/** Persistent patient profile */
-	PATIENT_PROFILE: CACHE.getKey("PATIENT_PROFILE"),
+	PATIENT_PROFILE: CACHE.getKey("PATIENT_PROFILE") || [],
 };
 
 /** Indicates that we are running a test in the terminal, otherwise uses Signal */
