@@ -118,8 +118,9 @@ async function getTheraputicResponseFromLLM(msg, retries = 3) {
 
 			// Update session variables and the patient profile
 			SESSION.JOURNAL = json["JournalEntry"];
+			console.log(SESSION.PATIENT_PROFILE)
 			SESSION.PATIENT_PROFILE = [
-				...SESSION.PATIENT_PROFILE,
+				...(SESSION.PATIENT_PROFILE || []),
 				...(json["PatientProfile"] || []),
 			];
 
